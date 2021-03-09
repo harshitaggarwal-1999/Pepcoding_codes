@@ -133,6 +133,30 @@ public class Binarytree{
         
     }
 
+    public static int max(TreeNode node) {
+        // write your code here
+        if(node == null)return 0;
+        
+        int temp1 = max(node.left);
+        int temp2 = max(node.right);
+        
+        return Math.max(node.data,Math.max(temp1,temp2));
+      }
+    
+      public static int height(TreeNode node) {
+        // write your code here
+        
+        if(node == null)return -1;
+        
+        int temp1 = height(node.left);
+        int temp2 = height(node.right);
+        
+        return Math.max(temp1,temp2)+1;
+        
+        
+        
+      }
+
     public static int size(TreeNode node) {
         // write your code here
         if(node == null){
@@ -146,8 +170,8 @@ public class Binarytree{
         
       }
     
-      public static int sum(TreeNode node) {
-        // write your code here
+    public static int sum(TreeNode node) {
+    // write your code here
         if(node == null){
             return 0;
         }
@@ -156,7 +180,20 @@ public class Binarytree{
         int temp2 = sum(node.right);
         
         return temp1+temp2+node.data;
-      }
+    }
+
+    public static void printKleveldown(TreeNode node, int k){
+        if(node == null)return;
+
+        if(k == 0){
+        System.out.println(node.data);
+        return;
+        }
+
+        printKleveldown(node.left, k-1);
+        printKleveldown(node.right, k-1);
+        
+    }
     public static void main(String[] args){
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
@@ -170,9 +207,5 @@ public class Binarytree{
         display(root);
 
         ArrayList<ArrayList<Integer>> levelOT = levelOrderTraversal(root);
-        
-        
-
-
     }
 }
