@@ -12,6 +12,7 @@
 
 
 let cmds = process.argv.slice(2);
+// console.log(cmds);
 const fs = require("fs");
 
 // -s remove lines(wcat filename -s)

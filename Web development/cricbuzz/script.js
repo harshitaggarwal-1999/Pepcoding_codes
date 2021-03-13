@@ -42,6 +42,11 @@ async function main () {
     //     strikeRate:
     // }]
     // console.log(innings1Batsmen);
+
+    // ---------------------------------------------------BOWLERS---------------------------------------
+    
+
+
 }
 
 main();

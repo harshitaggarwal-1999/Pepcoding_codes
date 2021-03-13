@@ -2,6 +2,8 @@
 // let a  = 10;
 // console.log(a);
 
+//javascript is loosely typed and single threaded language
+
 // const a = 20;
 // const a  = 10;
 // console.log(a);
