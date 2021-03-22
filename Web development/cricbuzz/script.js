@@ -8,7 +8,7 @@ let innings = 2;
 // builder initialize karta hai aur inform karta hai browser ko ki kuch bana hai aur for browser se browser select karo and build() build kardega
 
 async function main () {
-    await browser.get(`https://www.cricbuzz.com/live-cricket-scores/${matchId}`);
+    
     // if await not there then hello23 tab tak print nahi hoga jab tk site puri load nahi ho jata hai
     await browser.wait(wd.until.elementLocated(wd.By.css(".cb-nav-bar a")));
     let buttons = await browser.findElements(wd.By.css(".cb-nav-bar a"));
