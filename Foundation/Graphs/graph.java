@@ -3,9 +3,9 @@ import java.util.*;
 
 public class Main {
    static class Edge {
-      int src;
-      int nbr;
-      int wt;
+      int src; //source vertex itself
+      int nbr; //neighbour
+      int wt; //weight
 
       Edge(int src, int nbr, int wt){
          this.src = src;
