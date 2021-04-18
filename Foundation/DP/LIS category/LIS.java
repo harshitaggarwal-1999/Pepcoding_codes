@@ -34,7 +34,8 @@ class Solution {
         
         if(dp[ei] != 0)return dp[ei];
         
-        int omax = 1;
+        int omax = 1;// as per no. ek to LIS to hoga hi
+        
         for(int si = 0; si < ei; si++){
             int ans = LIS(nums, si, dp);
             
