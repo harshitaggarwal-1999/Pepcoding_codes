@@ -13,21 +13,23 @@ void ans(){
     ll n;
     cin >> n;
 
-    if(n%2050!= 0){
-        cout << -1 << endl;
-        return;
+    ll sum  = 0;
+    bool  flag  = true;
+    for(ll i = 0 ; i < n; i++){
+        ll num;
+        cin >> num;
+
+        sum+= num;
+        ll minsum=(i*(i+1))/2;
+        // cout <<"Minsum : " << minsum << endl;
+        if(sum < minsum){
+            flag = false;
+        }
     }
 
-    n = n/2050;
-    int sum  = 0;
-    while(n != 0){
-        sum += n%10;
-        n = n/10;
-    } 
-    cout << sum << endl;
-    return;
     
-
+    if(flag)cout << "YES" << endl;
+    else cout << "NO" << endl;
 }
 
 int main() {
@@ -39,7 +41,6 @@ int main() {
     cin >> t;
     while(t--){
         ans();
-
     }
     return 0;
 }
