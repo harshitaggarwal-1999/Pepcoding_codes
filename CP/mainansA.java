@@ -45,6 +45,8 @@ public class mainansA{
         return reduce(num);       
         
     }
+
+    
 }
 
     

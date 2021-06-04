@@ -7,7 +7,7 @@
 import java.util.*;
 import java.io.*;
 
-public class {
+public class kingescape{
 
     
     // static int INF = 998244353;
@@ -142,22 +142,16 @@ public class {
         return a;
     }
 
-    public static int smallest_divisor(int n) {
-
-        int i;
-        for (i = 2; i <= Math.sqrt(n); ++i) {
-            if (n % i == 0) {
-                return i;
-            }
-        }
-        return n;
-    }
+    public static void yn(int i){
+        if(i == 0) System.out.println("NO");
+        else System.out.println("YES");
+    } 
 
     // >>>>>>>>>>>>>>>>>>>>>>>>>>>> CODE STARTS HERE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
     static Scanner scn = new Scanner(System.in);
     public static void main(String[] args) {
-        int t = scn.nextInt();
+        int t = 1;
         while(t-- > 0){
             solver();
         }
@@ -165,7 +159,42 @@ public class {
 
     public static void solver() {
         //write you code here
+        // true if bx greater than ax// false if less than
+        // both should be of same type
 
+        int n= scn.nextInt();
+        int ax = scn.nextInt();
+        int ay = scn.nextInt();
+        int bx = scn.nextInt();
+        int by = scn.nextInt();
+        int cx = scn.nextInt();
+        int cy = scn.nextInt();
+
+        if(bx ==  ax || by == ay || cx == ax || cy == ay){
+            yn(0);
+            return;
+        }
+
+        boolean bxcheck = false;
+        boolean bycheck = false;
+        boolean cxcheck = false;
+        boolean cycheck = false;
+
+
+        if(bx > ax)bxcheck = true;
+        if(by > ay)bycheck = true;
+        if(cx > ax)cxcheck = true;
+        if(cy > ay)cycheck = true;
+        // System.out.println(bxcheck);
+        // System.out.println(bycheck);
+        // System.out.println(cxcheck);
+        // System.out.println(cycheck);
+
+        if(bxcheck == cxcheck && bycheck == cycheck){
+            yn(1);
+            return;
+        }
+        yn(0);
 
     }
 }

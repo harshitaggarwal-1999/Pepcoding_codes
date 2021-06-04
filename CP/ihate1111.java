@@ -7,7 +7,7 @@
 import java.util.*;
 import java.io.*;
 
-public class {
+public class ihate1111{
 
     
     // static int INF = 998244353;
@@ -127,32 +127,6 @@ public class {
         }
     }
 
-    public long[] nextLongArray(int n) {
-        long[] a = new long[n];
-        for (int i = 0; i < n; i++)
-            a[i] = scn.nextLong();
-        return a;
-    }
-
-    public int[] nextIntArray(int n) {
-        int[] a = new int[n];
-        for (int i = 0; i < n; i++){
-            a[i] = scn.nextInt();
-        }
-        return a;
-    }
-
-    public static int smallest_divisor(int n) {
-
-        int i;
-        for (i = 2; i <= Math.sqrt(n); ++i) {
-            if (n % i == 0) {
-                return i;
-            }
-        }
-        return n;
-    }
-
     // >>>>>>>>>>>>>>>>>>>>>>>>>>>> CODE STARTS HERE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
     static Scanner scn = new Scanner(System.in);
@@ -165,7 +139,27 @@ public class {
 
     public static void solver() {
         //write you code here
+        int n = scn.nextInt();
+        HashMap<Integer,Boolean> mymap = new HashMap<>(); 
+        if(check(n,0,mymap))System.out.println("YES");
+        else System.out.println("NO");
+    }
 
+    static int[] arr = {111111111,11111111,1111111,111111,11111,1111,111,11};
 
+    public static boolean check(int num,int idx, HashMap<Integer,Boolean> mymap){
+        if(num==0 || idx==arr.length)
+        {
+            if(num==0)return true;
+            else return false;
+        }
+        if(mymap.containsKey(num))return mymap.get(num);
+
+        boolean ans= false;
+        if(arr[idx] <= num)
+        ans = ans || check(num-arr[idx],idx,mymap);
+        ans = ans || check(num,idx+1,mymap);
+        mymap.put(num,ans);
+        return mymap.get(num);
     }
 }

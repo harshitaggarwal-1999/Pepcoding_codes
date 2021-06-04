@@ -7,7 +7,7 @@
 import java.util.*;
 import java.io.*;
 
-public class {
+public class brokenkeyboard{
 
     
     // static int INF = 998244353;
@@ -142,30 +142,52 @@ public class {
         return a;
     }
 
-    public static int smallest_divisor(int n) {
-
-        int i;
-        for (i = 2; i <= Math.sqrt(n); ++i) {
-            if (n % i == 0) {
-                return i;
-            }
-        }
-        return n;
-    }
+    public static void yn(int i){
+        if(i == 0) System.out.println("NO");
+        else System.out.println("YES");
+    } 
 
     // >>>>>>>>>>>>>>>>>>>>>>>>>>>> CODE STARTS HERE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
     static Scanner scn = new Scanner(System.in);
     public static void main(String[] args) {
         int t = scn.nextInt();
+        boolean one = false;
         while(t-- > 0){
+            if(!one){
+                String waste = scn.nextLine();
+                one = true;
+            }
             solver();
         }
     }
 
     public static void solver() {
         //write you code here
-
-
+        String str = scn.nextLine();
+        int i = 0;
+        HashMap<Character,Integer> rep = new HashMap<>();
+        String res = "";
+        while(i < str.length()-1){
+            char ch1 = str.charAt(i);
+            char ch2 = str.charAt(i+1);
+            if(ch1 == ch2){
+                i+=2;
+            }else{
+                if(rep.containsKey(ch1) == false){
+                    res += ch1;
+                    rep.put(ch1,1);
+                }
+                i++;
+            }
+        }
+        if(i == str.length()-1){
+            if(rep.containsKey(str.charAt(str.length()-1)) == false)res += str.charAt(i);
+        }
+        // sort 
+        char[] arr = res.toCharArray();
+        Arrays.sort(arr);
+        res = String.valueOf(arr);
+        System.out.println(res);
     }
 }

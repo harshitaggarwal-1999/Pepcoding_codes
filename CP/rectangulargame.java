@@ -7,7 +7,7 @@
 import java.util.*;
 import java.io.*;
 
-public class {
+public class rectangulargame{
 
     
     // static int INF = 998244353;
@@ -157,7 +157,7 @@ public class {
 
     static Scanner scn = new Scanner(System.in);
     public static void main(String[] args) {
-        int t = scn.nextInt();
+        int t = 1;
         while(t-- > 0){
             solver();
         }
@@ -165,7 +165,15 @@ public class {
 
     public static void solver() {
         //write you code here
-
+        int n = scn.nextInt();
+        int sum=0;
+        while(n>1)
+        {
+            int x = smallest_divisor(n);
+            sum+=n;
+            n/=x;  
+        }
+        System.out.println(sum+1);
 
     }
 }

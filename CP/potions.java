@@ -7,7 +7,7 @@
 import java.util.*;
 import java.io.*;
 
-public class {
+public class potions{
 
     
     // static int INF = 998244353;
@@ -130,34 +130,15 @@ public class {
     public long[] nextLongArray(int n) {
         long[] a = new long[n];
         for (int i = 0; i < n; i++)
-            a[i] = scn.nextLong();
+            a[i] = nextLong();
         return a;
-    }
-
-    public int[] nextIntArray(int n) {
-        int[] a = new int[n];
-        for (int i = 0; i < n; i++){
-            a[i] = scn.nextInt();
-        }
-        return a;
-    }
-
-    public static int smallest_divisor(int n) {
-
-        int i;
-        for (i = 2; i <= Math.sqrt(n); ++i) {
-            if (n % i == 0) {
-                return i;
-            }
-        }
-        return n;
     }
 
     // >>>>>>>>>>>>>>>>>>>>>>>>>>>> CODE STARTS HERE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
     static Scanner scn = new Scanner(System.in);
     public static void main(String[] args) {
-        int t = scn.nextInt();
+        int t = 1;
         while(t-- > 0){
             solver();
         }
@@ -165,6 +146,24 @@ public class {
 
     public static void solver() {
         //write you code here
+        int n = scn.nextInt();
+        int[] arr = new int[n];
+        for(int i = 0 ;i < n; i++){
+            arr[i] = scn.nextInt();
+        }
+
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        long h = 0;
+        
+        for(int i = 0 ;i < n; i++){
+            pq.add(arr[i]);
+            h += (long) arr[i];
+            if(h < 0){
+                h -= pq.peek();
+                pq.remove();
+            }
+        }
+        System.out.println(pq.size());
 
 
     }
