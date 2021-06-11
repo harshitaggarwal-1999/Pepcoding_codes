@@ -12,9 +12,7 @@ public class snippetupdate {
         public FastReader() {
             try {
                 br = new BufferedReader(new FileReader("input.txt"));
-                PrintStream out = new
-                PrintStream(new FileOutputStream("output.txt"));
-            
+                PrintStream out = new PrintStream(new FileOutputStream("output.txt"));
                 System.setOut(out);
             }
             catch (Exception e) {
@@ -61,14 +59,14 @@ public class snippetupdate {
         }
     }
 
-    // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> MATHS VALUES <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> MATHS VALUES <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
     // static int INF = 998244353;
     static int INF = (int) 1e9 + 7;
     static int MAX = Integer.MAX_VALUE; // static int MAX = 2147483647
     static int MIN = Integer.MIN_VALUE; // static int MIN = -2147483647
 
-    // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> PAIR <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> PAIR <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     static class Pair {
         int first, second;
 
@@ -89,14 +87,14 @@ public class snippetupdate {
         }
     }
 
-    // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> GCD <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> GCD <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     public static long gcd(long a, long b) {
         if (a == 0)
             return b;
         return gcd(b % a, a);
     }
 
-    // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> LOWER BOUND <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> LOWER BOUND <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
     public static int LowerBound(long a[], long x) { // x is the target value or key
 
@@ -154,7 +152,7 @@ public class snippetupdate {
         }
     }
 
-    // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> UPPERBOUND <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> UPPERBOUND <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     public static int UpperBound(long a[], long x) {// x is the key or target value
         int l = -1, r = a.length;
         while (l + 1 < r) {
@@ -179,12 +177,12 @@ public class snippetupdate {
         return l + 1;
     }
 
-    // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> LCM <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> LCM <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     public static long lcm(long a, long b) {
         return (a * b) / gcd(a, b);
     }
 
-    // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> SWAP <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> SWAP <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     public static void swap(int[] arr, int i, int j) {
         if (i != j) {
             arr[i] ^= arr[j];
@@ -192,7 +190,7 @@ public class snippetupdate {
             arr[i] ^= arr[j];
         }
     }
-    // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ARRAYINPUT <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ARRAYINPUT <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
     public static long[] nextLongArray(int n) {
         long[] a = new long[n];
@@ -209,7 +207,7 @@ public class snippetupdate {
         return a;
     }
 
-    // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> SMALLEST DIVISOR <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> SMALLEST DIVISOR <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     public static int smallest_divisor(int n) {
 
         int i;
@@ -223,7 +221,7 @@ public class snippetupdate {
 
     public static FastReader scn = new FastReader();
 
-    // >>>>>>>>>>>>>>>>>>>>>>>>>>>> CODE STARTS HERE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>> CODE STARTS HERE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
     public static void main(String[] args) throws Exception {
         int t = scn.nextInt();
@@ -233,8 +231,8 @@ public class snippetupdate {
     }
 
     public static void solver() {
-        
+        $0
 
     }
-    //-------------------------------- HO JA BHAI ----------------------------------------------------
+//-------------------------------- HO JA BHAI ----------------------------------------------------
 }

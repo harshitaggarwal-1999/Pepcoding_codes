@@ -7,7 +7,7 @@
 import java.util.*;
 import java.io.*;
 
-public class  {
+public class cityday {
     // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> FAST I/O <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     static class FastReader {
         BufferedReader br;
@@ -231,13 +231,41 @@ public class  {
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>> CODE STARTS HERE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
     public static void main(String[] args) throws Exception {
-        int t = scn.nextInt();
+        int t = 1;
         while (t-- > 0) {
             solver();
         }
     }
 
     public static void solver() {
+        int n = scn.nextInt();
+        int x = scn.nextInt();
+        int y = scn.nextInt();
+        int[] arr = nextIntArray(n);             
+        for(int i=0;i<n;i++) {
+            boolean f = true;
+            for(int j=i-1;j>=0 && j>=i-x;j--)
+            {
+                if(arr[j] < arr[i])
+                {
+                    f = !f;
+                    break;
+                }
+            }
+            if(!f)  continue;
+            for(int j = i+1; j<n && j<=i+y;j++)
+            {
+                if(arr[j] < arr[i])
+                {
+                    f = !f;
+                    break;
+                }
+            }
+            if(!f)  continue;
+
+            System.out.println(i+1);
+            break;
+        }
         
 
     }

@@ -7,7 +7,7 @@
 import java.util.*;
 import java.io.*;
 
-public class  {
+public class arraycancelation {
     // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> FAST I/O <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     static class FastReader {
         BufferedReader br;
@@ -238,8 +238,14 @@ public class  {
     }
 
     public static void solver() {
-        
-
+        int n  = scn.nextInt();
+        long[] arr = nextLongArray(n);
+        long sum = 0;
+        for(int i = 0; i < n; i++){
+            sum=sum+arr[i];
+            sum = (sum>0)?sum:0;
+        }
+        System.out.println(sum);return;
     }
 //-------------------------------- HO JA BHAI ----------------------------------------------------
 }
