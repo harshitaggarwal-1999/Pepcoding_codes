@@ -20,10 +20,6 @@ int solve(){
 			ans++;
 		}
 	} else {
-//		int num = k;
-//		for(int i = 0; k < n; i++){
-//			k = (lli)k+num;
-//		}
 		
 		int c = n/k;
 		int d = n%k;
@@ -33,13 +29,11 @@ int solve(){
 		}
 		k=(lli)k*c;
 		ans = (lli)k/n;
-		
 		int div = k%n;
 		
 		if(div != 0) {
 			ans++;
 		}
-		 
 	}
 	
 	return ans;
