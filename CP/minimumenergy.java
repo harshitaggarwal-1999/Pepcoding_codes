@@ -8,6 +8,7 @@ import java.util.*;
 import java.io.*;
 
 public class minimumenergy {
+    
     // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> FAST I/O <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     static class FastReader {
         BufferedReader br;
