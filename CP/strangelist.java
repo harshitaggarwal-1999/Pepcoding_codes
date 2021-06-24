@@ -36,9 +36,61 @@ public class strangelist {
             solver();
         }
     }
+    static int level = 1000;
 
     public static void solver() {
+        int n = scn.nextInt();
+        int x = scn.nextInt();
+
+        int[] a = nextIntArray(n);
+
+        Queue<Pair> q = new ArrayDeque<>();
+        for(int i = 0 ; i< n; i++){
+            Pair p=new Pair(a[i],1);
+            q.add(p);
+        }
+
+        //queue basicaly
+        boolean flag = true;
+        long sum  = 0;
+
+        while(q.size() > 0){
+            Pair p = q.remove();
+            sum+=(long)p.first*p.second;
+            if(p.first%x != 0)flag = false;
+            if(flag == true){
+                Pair tobeadded= new Pair(p.first/x,p.second*x);
+                q.add(tobeadded);
+            }
+        }
+        System.out.println(sum);
+
+
+
 
     }
+
+    // public static int sum(int num, int x) {
+    //     int tempsum = 0;
+    //     int tempx = 1;
+    //     int templevel = 0;
+    //     while(num%x == 0 && templevel<level){
+    //         tempsum += num*tempx;
+    //         System.out.print(num+" "+tempx+" "+ tempsum+" ");
+    //         num=num/x;
+    //         System.out.print(num);
+    //         System.out.println();
+    //         tempx*=x;
+    //         templevel++;
+    //     }
+    //     tempsum += num*tempx;
+    //     System.out.println("level: " + level + " templevel: "+templevel);
+    //     if(templevel < level)level = templevel;
+        
+        
+    //     System.out.println("tempsum: "+ tempsum);
+    //     return tempsum;
+        
+    // }
 //-------------------------------- HO JA BHAI ----------------------------------------------------
 }
