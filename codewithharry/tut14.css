@@ -1,0 +1,61 @@
+/* ID selector */
+#firstElement{
+    color: black;
+    font-size: small;
+}
+#secondElement{
+    color:yellow;
+    font-size: medium;
+}
+#thirdElement{
+    color: red;
+    font-size: large;
+}
+#fourthElement{
+    color: purple;
+}
+/* class selecctor */
+.yellowBg{
+    background-color: yellow;
+}
+
+.blackBg{
+    background-color: black;
+}
+/* grouping selector */
+footer, #fourthElement{
+    font-size: x-large;
+}
+/* element selector */
+p{
+    border: 0px;
+    border-radius: 25px 50px 50px;
+}
+
+.centertext {
+    text-align: center;
+}
+.center{
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+body {
+    background-image: url("634075.png");
+    background-color: #cccccc;
+    
+    
+}
+.background{
+    opacity: 0.1;
+}
+
+#image{
+    border: 0px;
+    border-radius: 25px 50px 50px;
+    color: rgb(24, 24, 70);
+}
+
+
