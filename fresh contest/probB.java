@@ -7,7 +7,7 @@ FROM-> MAHARAJA AGRASEN INSTITUE OF TECHNOLOGY
 import java.util.*;
 import java.io.*;
 
-public class probA {
+public class probB {
     public static void main(String[] args) throws Exception {
         int t = scn.nextInt();
         while (t-- > 0) {
@@ -16,39 +16,57 @@ public class probA {
     }
 
     public static void solver() {
-        int xa = scn.nextInt();
-        int ya = scn.nextInt();
-        int xb = scn.nextInt();
-        int yb = scn.nextInt();
-        int xf = scn.nextInt();
-        int yf = scn.nextInt();
-        
-
-        if(xf == xa && xf == xb){
-            if(yf > ya && yf > yb){
-                System.out.println(Math.abs(xb-xa)+Math.abs(yb-ya));return;
+        String str = scn.nextLine();
+        char maxelem = 'a';
+        HashMap<Character,Integer> map = new HashMap<>();
+        for(int i = 0; i < str.length(); i++){
+            if((int)str.charAt(i)> (int)maxelem){
+                maxelem = (char)str.charAt(i);
             }
-            else if(yf < ya && yf < yb){
-                System.out.println(Math.abs(xb-xa)+Math.abs(yb-ya));return;
+            if(map.containsKey(str.charAt(i))){
+                System.out.println("NO");
+                return;
             }
-
-            else System.out.println(Math.abs(xb-xa)+Math.abs(yb-ya)+2);
+            else{
+                map.put(str.charAt(i),i);
+            }
         }
+        int low = MAX;
+        int high = MIN;
+        // Debug.dbg(maxelem);
+        int prevlow = -1;
+        int prevhigh = -1;
+        boolean isrun = false;
 
-        else if(yf == ya && yf == yb){
-            if(xf > xa && xf > xb){
-                System.out.println(Math.abs(xb-xa)+Math.abs(yb-ya));return;
-            }
-            else if(xf < xa && xf < xb){
-                System.out.println(Math.abs(xb-xa)+Math.abs(yb-ya));return;
-            }
 
-            else System.out.println(Math.abs(xb-xa)+Math.abs(yb-ya)+2);
+        char counter = 'a';
+        while(true){
+            if(map.containsKey(counter) == false){
+                break;
+            }
+            low = Math.min(low,map.get(counter));
+            high = Math.max(high, map.get(counter));
+            map.remove(counter);
+            counter++;
+            // Debug.dbg(high + " HIGH " + low + "LOW");
+            if(!isrun){
+                isrun = true;
+                prevlow =low;
+                prevhigh = high;
+                // Debug.dbg(prevhigh+" prevhigh "+prevlow+" prevlow");
+                
+            }else {
+                if(Math.abs(prevlow-low)<=1 && Math.abs(prevhigh-high)<=1){
+                    // Debug.dbg(prevhigh+" prevhigh "+prevlow+" prevlow");
+                    prevlow =low;
+                    prevhigh = high;
+                }else {
+                    System.out.println("NO");return;
+                }
+            }
         }
-        else  System.out.println(Math.abs(xb-xa)+Math.abs(yb-ya));
-
-
-
+        if(counter>maxelem)System.out.println("YES");
+        else System.out.println("NO");
     }
     //-------------------------------- HO JA BHAI ----------------------------------------------------
     /* code ends here*/
