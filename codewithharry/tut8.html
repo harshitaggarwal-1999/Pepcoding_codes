@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h2> This is Form element</h2>
+    <form action="backend.php">
+        <br>
+        <label for="name">Name</label>
+        
+        <div>
+            <input type="text" id="name">
+        </div>
+        <br>
+        <label for="role">Role</label>
+        <div>
+            <input type="text" id="role"> 
+        </div>
+        <br>
+        <label for="email">Email</label>
+        <div>
+            <input type="email" name="myEmail" id="email">
+        </div>
+        <br>
+        <!-- <br> -->
+        <div>
+            <input type="date" name="myDate" id="">
+        </div>
+        <br>
+        <label for="bonus">Bonus</label>
+        <div>
+            <input type="number" name="myBonus" id="bonus">
+        </div>
+        <br>
+        <div>
+            <label for="car">Car</label>
+            <select name="myCar" id="car">
+                <option value="audi">AUDI</option>
+                <option value="mercedes" selected disabled hidden>Mercedes</option>
+                <option value="bmw">BMW</option>
+                <option value="vw">VolksWagon</option>
+            </select>
+        </div>
+        <br>
+        <label for="eligible">Are you Eligible? </label>
+        <div>
+            <input type="checkbox" name="MyCheckbox" id="eligible" checked> 
+        </div>
+        <br>
+        <label for="gender">Gender</label>
+        <div>
+            Male <input type="radio" name="myGender" id="gender"> FeMale <input type="radio" name="myGender" id="gender"> Others <input type="radio" name="myGender" id="gender">
+        </div>
+        <br>
+        <label for="about">Write about yourself:</label>
+        <div>
+            <textarea name="myText" cols="30" rows="5" id="about"></textarea>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Submit Now">
+            <input type="reset" value="Reset Now">
+        </div>
+    </form>
+</body>
+</html>
