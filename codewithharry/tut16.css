@@ -1,0 +1,35 @@
+header {
+  /* font-weight: bold; */
+  font-size: 33px;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  border: 0px;
+  border-radius: 50px;
+  background-color: green;
+  color: yellow;
+}
+
+body {
+  font-family: Aclonica;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 26.4px;
+  background-color: black;
+}
+
+p {
+  justify-content: center;
+  position: relative;
+  color: greenyellow;
+  /* font-family: cursive; */
+  /* font-weight: bold */
+  line-height: 1.3em; /* jo parent class hai uska 8.3 time */
+}
+#insidespan {
+  font-weight: bold;
+  font-style: italic;
+  color: red;
+}
