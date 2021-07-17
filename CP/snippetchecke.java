@@ -7,7 +7,7 @@ FROM-> MAHARAJA AGRASEN INSTITUE OF TECHNOLOGY
 import java.util.*;
 import java.io.*;
 
-public class snippetchecke {
+public class  {
     public static void main(String[] args) throws Exception {
         int t = scn.nextInt();
         while (t-- > 0) {
@@ -16,10 +16,9 @@ public class snippetchecke {
     }
 
     public static void solver() {
-        int n = scn.nextInt();
-        Debug.dbg(n);
-        //thankyou
-        System.out.println(n);
+        for(int i = 0; i < ; i++){
+            
+        }
 
     }
     //-------------------------------- HO JA BHAI ----------------------------------------------------
