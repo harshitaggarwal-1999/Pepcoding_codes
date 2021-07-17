@@ -18,6 +18,7 @@ public class snippetchecke {
     public static void solver() {
         int n = scn.nextInt();
         Debug.dbg(n);
+        //thankyou
         System.out.println(n);
 
     }
