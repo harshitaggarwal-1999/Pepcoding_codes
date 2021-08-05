@@ -7,7 +7,7 @@
 import java.util.*;
 import java.io.*;
 
-public class {
+public class hdmi{
 
     
     // static int INF = 998244353;
@@ -165,7 +165,7 @@ public class {
 
     public static void solver() {
         //write you code here
-
+        System.out.println("java");
 
     }
 }
