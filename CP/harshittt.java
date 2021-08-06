@@ -7,7 +7,7 @@ FROM-> MAHARAJA AGRASEN INSTITUE OF TECHNOLOGY
 import java.util.*;
 import java.io.*;
 
-public class new1 {
+public class harshittt {
     public static void main(String[] args) throws Exception {
         int t = scn.nextInt();
         while (t-- > 0) {
@@ -18,7 +18,7 @@ public class new1 {
     public static void solver() {
         int n = scn.nextInt();
         System.out.println(n);
-        
+        // Debug.dbg(n);
 
     }
     //-------------------------------- HO JA BHAI ----------------------------------------------------
