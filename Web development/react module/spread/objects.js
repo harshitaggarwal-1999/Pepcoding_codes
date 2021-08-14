@@ -14,7 +14,7 @@ let state ={
 // console.log(copy);
 //////////////////////////////////////////////////////////////////////////////
 
-let copy = {...state};
+// let copy = {...state};
 // copy.name = 'Tushar';
 // console.log(state);
 // console.log(copy);
@@ -38,7 +38,7 @@ let copy = {...state};
 // doublecopy.address.country.countryName="India";
 // console.log(state);
 // console.log(doublecopy);
-
+ //deep copy for each level taaki sabke elements aaye spread se naa ki unke memory addresses
 // let deepCopy = {
 //     ...state,
 //     address:{
@@ -49,8 +49,14 @@ let copy = {...state};
 //     }
 // }
 
-let dcopy = JSON.parse(JSON.stringify(state));
+// deepCopy.address.country.countryName="India";
+// console.log(state);
+// console.log(deepCopy);
+
+// for 40-50 levels o copying
+
+// let dcopy = JSON.parse(JSON.stringify(state));
 // console.log(dcopy);
-dcopy.address.country.countryName='India';
-console.log(state);
-console.log(dcopy);
+// dcopy.address.country.countryName='India';
+// console.log(state);
+// console.log(dcopy);
