@@ -27,5 +27,6 @@ let person={
 
 let {name,country:b,job:c} = person;
 console.log(name);
+// console.log(country);as vo pehle hi 'b' ko assign ho sakta hai to hum aab uska use karenge to error aayega
 console.log(b);
 console.log(c);

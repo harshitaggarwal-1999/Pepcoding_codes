@@ -31,5 +31,5 @@ let introduction=['Hello','I','am','Tushar'];
 // console.log(b);
 
 //////query
-let[greeting]=introduction;
-console.log(greeting);
+// let[greeting]=introduction;
+// console.log(greeting);
