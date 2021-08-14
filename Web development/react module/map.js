@@ -15,7 +15,8 @@ let arr = [1,2,3,4,5,6];
 // returns a new array
 let narr = arr.map(function(el){
     // console.log(el);
+    // return 2*el;//double of element is returned
     return el*el+1;
 });
-console.log(narr);
-console.log(arr);
+console.log("narr", narr);
+console.log("arr",arr);
