@@ -7,7 +7,7 @@ FROM-> MAHARAJA AGRASEN INSTITUE OF TECHNOLOGY
 import java.util.*;
 import java.io.*;
 
-public class new1 {
+public class positivespewing {
     public static void main(String[] args) throws Exception {
         int t = scn.nextInt();
         while (t-- > 0) {
@@ -17,8 +17,21 @@ public class new1 {
 
     public static void solver() {
         int n = scn.nextInt();
-        System.out.println(n);
-        
+        int k = scn.nextInt();
+        int[] arr =nextIntArray(n);
+        HashSet<Integer> set = new HashSet<>();
+        for(int i = 0 ; i < n; i++){
+            if(arr[i] == 0){
+                set.add(i);
+            }
+        }
+        int sum = 0;
+        for(int i = 0 ; i < n; i++){
+            sum+=arr[i];
+        }
+        while(k--){
+            sum += 2*(n-set.size());
+        }        
 
     }
     //-------------------------------- HO JA BHAI ----------------------------------------------------
