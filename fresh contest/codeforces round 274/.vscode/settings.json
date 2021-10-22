@@ -1,0 +1,26 @@
+{
+    "saveEditorLayout.list": [
+        {
+            "name": "cp",
+            "orientation": 0,
+            "documents": [
+                {
+                    "fsPath": "c:\\Users\\HARSHIT\\Desktop\\Pepcoding_codes\\fresh contest\\codeforces round 274\\ansA.java",
+                    "column": 1
+                },
+                {
+                    "fsPath": "c:\\Users\\HARSHIT\\Desktop\\Pepcoding_codes\\fresh contest\\codeforces round 274\\.vscode\\settings.json",
+                    "column": 1
+                },
+                {
+                    "fsPath": "c:\\Users\\HARSHIT\\Desktop\\Pepcoding_codes\\fresh contest\\codeforces round 274\\input.txt",
+                    "column": 2
+                },
+                {
+                    "fsPath": "c:\\Users\\HARSHIT\\Desktop\\Pepcoding_codes\\fresh contest\\codeforces round 274\\output.txt",
+                    "column": 3
+                }
+            ]
+        }
+    ]
+}
