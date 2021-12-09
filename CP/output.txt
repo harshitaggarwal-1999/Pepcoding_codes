@@ -1,18 +1,2 @@
-usict-cse 30327
-usict-it 39000
-usict-ece 50000
-mait-cse 73388
-mait-it 91130
-bvp-cse 93099
-msit-cse 99994
-bvp-it 112788
-msit-it 123141
-bpit-cse 134084
-bpit-cse 134084
-mait-ece 145613
-bpit-it 156147
-niec-cse 190880
-bvp-ece 226903
-msit-ece 239918
-niec-it 263087
-bpit-ece 329968
+A
+C
