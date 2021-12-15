@@ -238,14 +238,20 @@ public class conteststart {
     }
 
     public static void solver() {
-        int n = scn.nextInt();
-        int x = scn.nextInt();
-        int t = scn.nextInt();
+        long n = scn.nextLong();
+        long x = scn.nextLong();
+        long t = scn.nextLong();
 
-        long sum = 0;
+        long p = t/x;
 
-        for(int i = 0; i < n; i++)
 
+        if(p > n){
+            System.out.println((n-1)*(n)/2);
+        }else{
+            long ans = p*n;
+            ans -= p*(p+1)/2;
+            System.out.println(ans);
+        }
     }
 //-------------------------------- HO JA BHAI ----------------------------------------------------
 }
