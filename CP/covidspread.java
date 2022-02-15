@@ -7,7 +7,7 @@ FROM-> MAHARAJA AGRASEN INSTITUE OF TECHNOLOGY
 import java.util.*;
 import java.io.*;
 
-public class a {
+public class covidspread {
     public static void main(String[] args) throws Exception {
         int t = scn.nextInt();
         while (t-- > 0) {
@@ -16,14 +16,26 @@ public class a {
     }
 
     public static void solver() {
-        int n =scn.nextInt();
-        StringBuilder sb = new StringBuilder();
-        char c = (int)'A'-n+1;
-        for(int i = 0 ;i < 2*n; i++){
-            for(int j = 0 ;j < n; j++){
+        int n = scn.nextInt();
+        int d = scn.nextInt();
 
+        int numinfected = 1;
+        int days = 0;
+        while(days < d){
+            if(days < 10){
+                numinfected *= 2;
+            }else{
+                numinfected *= 3;
             }
+            if(numinfected >= n){
+                // System.out.println("big");
+                numinfected = n;
+                break;
+            }
+            days++;
         }
+
+        System.out.println(numinfected);
 
     }
     //-------------------------------- HO JA BHAI ----------------------------------------------------

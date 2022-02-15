@@ -7,7 +7,7 @@ FROM-> MAHARAJA AGRASEN INSTITUE OF TECHNOLOGY
 import java.util.*;
 import java.io.*;
 
-public class a {
+public class gcdarrays {
     public static void main(String[] args) throws Exception {
         int t = scn.nextInt();
         while (t-- > 0) {
@@ -16,14 +16,32 @@ public class a {
     }
 
     public static void solver() {
-        int n =scn.nextInt();
-        StringBuilder sb = new StringBuilder();
-        char c = (int)'A'-n+1;
-        for(int i = 0 ;i < 2*n; i++){
-            for(int j = 0 ;j < n; j++){
+        long l = scn.nextLong();
+        long r = scn.nextLong();
+        long k = scn.nextLong();
 
-            }
+        if(l==r && l != 1){
+            System.out.println("YES");
+            return;
         }
+        long countdiv =0;
+        if(l%2 == 0 && r%2 == 0){
+            countdiv = (long)((r-l)/2+1);
+        }else if(l%2 == 0 && r%2 != 0){
+            countdiv = (long)((r-l)/2+1);
+        }else if(l%2 != 0 && r%2 == 0){
+            countdiv = (long)(r-l)/2+1;
+        }else{
+            countdiv = (long)(r-l)/2;
+        }
+
+        countdiv = (long)(r-l+1)-countdiv;
+        // Debug.dbg(countdiv);
+        if(k >= countdiv){
+            System.out.println("YES");
+            return;
+        }
+        System.out.println("NO");
 
     }
     //-------------------------------- HO JA BHAI ----------------------------------------------------

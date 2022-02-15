@@ -7,7 +7,7 @@ FROM-> MAHARAJA AGRASEN INSTITUE OF TECHNOLOGY
 import java.util.*;
 import java.io.*;
 
-public class a {
+public class reverseAndConcatenate {
     public static void main(String[] args) throws Exception {
         int t = scn.nextInt();
         while (t-- > 0) {
@@ -16,15 +16,31 @@ public class a {
     }
 
     public static void solver() {
-        int n =scn.nextInt();
-        StringBuilder sb = new StringBuilder();
-        char c = (int)'A'-n+1;
-        for(int i = 0 ;i < 2*n; i++){
-            for(int j = 0 ;j < n; j++){
+        int n = scn.nextInt();
+        int k = scn.nextInt();
+        String str= scn.next();
 
-            }
+        
+        if(k == 0 && pal(str)){
+            // Debug.dbg("In if"+" "+k+" "+pal(str)+" "+str);
+            System.out.println(1);
+        }else{
+            System.out.println(2);
         }
+        
 
+    }
+
+    public static boolean pal (String str){
+        char[] arr = str.toCharArray();
+
+        int i = 0; int j = str.length()-1;
+        
+        while( i < j){
+            if(arr[i] != arr[j])return false;
+            i++; j--;
+        }
+        return true;
     }
     //-------------------------------- HO JA BHAI ----------------------------------------------------
     /* code ends here*/

@@ -7,23 +7,47 @@ FROM-> MAHARAJA AGRASEN INSTITUE OF TECHNOLOGY
 import java.util.*;
 import java.io.*;
 
-public class a {
+public class b {
     public static void main(String[] args) throws Exception {
-        int t = scn.nextInt();
+        int t = 1;
         while (t-- > 0) {
             solver();
         }
     }
 
     public static void solver() {
-        int n =scn.nextInt();
-        StringBuilder sb = new StringBuilder();
-        char c = (int)'A'-n+1;
-        for(int i = 0 ;i < 2*n; i++){
-            for(int j = 0 ;j < n; j++){
+        int n = scn.nextInt();
+        // System.out.println(n);
+        Pair[] arr = new Pair[n];
+        for(int i = 0; i < n; i++){
+            int x = scn.nextInt();
+            int y = scn.nextInt();
+            // System.out.println(x+" "+y);
+            Pair p = new Pair(x, y);
+            arr[i] = p;
+            
+        }
+        double ans = 0;
+        // Debug.dbg(arr.length);
+        for(int i = 0 ; i < arr.length; i++){
+            // Debug.dbg(1);
+            for(int j = 0; j < arr.length; j++){
+                Pair p1 = arr[i];
+                Pair p2 = arr[j];
 
+                int tempansx = Math.abs(p1.first-p2.first);
+                int tempansy = Math.abs(p1.second - p2.second);
+                // Debug.dbg(tempansx);
+                // Debug.dbg(tempansy);
+                double tempans = (double)Math.sqrt((double)Math.pow((double)tempansx, 2) + (double) Math.pow((double)tempansy,2));
+
+                if(tempans >= ans){
+                    ans = (double) tempans;
+                }
             }
         }
+
+        System.out.println(String.format("%.10f", ans));
 
     }
     //-------------------------------- HO JA BHAI ----------------------------------------------------

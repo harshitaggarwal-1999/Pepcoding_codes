@@ -7,7 +7,7 @@ FROM-> MAHARAJA AGRASEN INSTITUE OF TECHNOLOGY
 import java.util.*;
 import java.io.*;
 
-public class a {
+public class keplerslaw {
     public static void main(String[] args) throws Exception {
         int t = scn.nextInt();
         while (t-- > 0) {
@@ -16,14 +16,21 @@ public class a {
     }
 
     public static void solver() {
-        int n =scn.nextInt();
-        StringBuilder sb = new StringBuilder();
-        char c = (int)'A'-n+1;
-        for(int i = 0 ;i < 2*n; i++){
-            for(int j = 0 ;j < n; j++){
+        double t1= scn.nextDouble();
+        double t2= scn.nextDouble();
+        double r1= scn.nextDouble();
+        double r2 = scn.nextDouble();
 
-            }
+        double t = Math.pow(t1, 2)/Math.pow(r1,3);
+        double r = Math.pow(t2, 2)/Math.pow(r2,3);
+
+        if(t == r){
+            System.out.println("YES");
+        }else{
+            System.out.println("NO");
         }
+
+
 
     }
     //-------------------------------- HO JA BHAI ----------------------------------------------------

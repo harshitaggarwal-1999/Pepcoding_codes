@@ -7,24 +7,26 @@ FROM-> MAHARAJA AGRASEN INSTITUE OF TECHNOLOGY
 import java.util.*;
 import java.io.*;
 
-public class a {
+public class bareverse {
     public static void main(String[] args) throws Exception {
-        int t = scn.nextInt();
+        int t = 1;
         while (t-- > 0) {
             solver();
         }
     }
 
     public static void solver() {
-        int n =scn.nextInt();
-        StringBuilder sb = new StringBuilder();
-        char c = (int)'A'-n+1;
-        for(int i = 0 ;i < 2*n; i++){
-            for(int j = 0 ;j < n; j++){
+        int a = scn.nextInt();
+        int b = scn.nextInt();
 
-            }
-        }
+        String s = scn.next();
 
+        String tempans = s.substring(a-1,b);
+        StringBuilder sb = new StringBuilder(tempans);
+        sb.reverse();
+        tempans = sb.toString();
+        String ans = s.substring(0,a-1)+ tempans + s.substring(b);
+        System.out.println(ans);
     }
     //-------------------------------- HO JA BHAI ----------------------------------------------------
     /* code ends here*/

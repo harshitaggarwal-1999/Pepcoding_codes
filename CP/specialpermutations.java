@@ -7,7 +7,7 @@ FROM-> MAHARAJA AGRASEN INSTITUE OF TECHNOLOGY
 import java.util.*;
 import java.io.*;
 
-public class a {
+public class specialpermutations {
     public static void main(String[] args) throws Exception {
         int t = scn.nextInt();
         while (t-- > 0) {
@@ -16,13 +16,46 @@ public class a {
     }
 
     public static void solver() {
-        int n =scn.nextInt();
-        StringBuilder sb = new StringBuilder();
-        char c = (int)'A'-n+1;
-        for(int i = 0 ;i < 2*n; i++){
-            for(int j = 0 ;j < n; j++){
+        int n = scn.nextInt();
+        int a = scn.nextInt();
+        int b = scn.nextInt();
 
+        int[] arr = new int[n];
+        arr[0] = a;
+        arr[n-1] = b;
+        int num = n;
+        for(int i = 1; i < n-1; i++){
+            
+            if(num == a || num == b){
+                num--;
             }
+            if(num == a || num == b){
+                num--;
+            }
+            // Debug.dbg(num+" "+ a + " " + b);
+            arr[i] = num;
+            num--;
+        }
+        
+
+        // Debug.dbg(arr);
+        int min = Integer.MAX_VALUE;
+        int max = MIN;
+        for(int i = 0 ; i < arr.length; i++){
+            if(i < n/2){
+                min = Math.min(min,arr[i]);
+            }else{
+                max  = Math.max(arr[i],max);
+            }
+        }
+
+        if(min != a || max != b){
+            System.out.println(-1);
+        }else{
+            for(int i = 0; i < arr.length; i++){
+                System.out.print(arr[i]+" ");
+            }
+            System.out.println();
         }
 
     }

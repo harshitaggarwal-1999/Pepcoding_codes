@@ -9,21 +9,24 @@ import java.io.*;
 
 public class a {
     public static void main(String[] args) throws Exception {
-        int t = scn.nextInt();
+        int t = 1;
         while (t-- > 0) {
             solver();
         }
     }
-
+    public static int fx(int n){
+        int ans = ((int)Math.pow(n,2)+2*n+3);
+        return ans;
+    }
     public static void solver() {
-        int n =scn.nextInt();
-        StringBuilder sb = new StringBuilder();
-        char c = (int)'A'-n+1;
-        for(int i = 0 ;i < 2*n; i++){
-            for(int j = 0 ;j < n; j++){
+        int n = scn.nextInt();
+        int fx = fx(n);
+        int fxpx = fx+n;
+        int fxfxpx = fx(fxpx);
+        int fxfx = fx(fx);
+        int ans = fx(fxfxpx + fxfx);
 
-            }
-        }
+        System.out.println(ans);
 
     }
     //-------------------------------- HO JA BHAI ----------------------------------------------------

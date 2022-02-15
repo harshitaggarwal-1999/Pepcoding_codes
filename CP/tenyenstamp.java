@@ -7,22 +7,22 @@ FROM-> MAHARAJA AGRASEN INSTITUE OF TECHNOLOGY
 import java.util.*;
 import java.io.*;
 
-public class a {
+public class tenyenstamp {
     public static void main(String[] args) throws Exception {
-        int t = scn.nextInt();
+        int t = 1;
         while (t-- > 0) {
             solver();
         }
     }
 
     public static void solver() {
-        int n =scn.nextInt();
-        StringBuilder sb = new StringBuilder();
-        char c = (int)'A'-n+1;
-        for(int i = 0 ;i < 2*n; i++){
-            for(int j = 0 ;j < n; j++){
+        int x = scn.nextInt();
+        int y = scn.nextInt();
 
-            }
+        if(y-x < 0){
+            System.out.println(0);
+        }else{
+            System.out.println((int)Math.ceil((double)(y-x)/10));
         }
 
     }

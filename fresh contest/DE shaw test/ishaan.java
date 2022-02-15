@@ -7,7 +7,7 @@ FROM-> MAHARAJA AGRASEN INSTITUE OF TECHNOLOGY
 import java.util.*;
 import java.io.*;
 
-public class a {
+public class ishaan {
     public static void main(String[] args) throws Exception {
         int t = scn.nextInt();
         while (t-- > 0) {
@@ -15,15 +15,29 @@ public class a {
         }
     }
 
-    public static void solver() {
-        int n =scn.nextInt();
-        StringBuilder sb = new StringBuilder();
-        char c = (int)'A'-n+1;
-        for(int i = 0 ;i < 2*n; i++){
-            for(int j = 0 ;j < n; j++){
+    public static void solver(String str) {
+        // String str = scn.nextLine();
+        String[] arr = str.split(" ");
+        String[] ansarr = new String[arr.length];
 
+        for(int i = 0; i < arr.length; i++){
+            String currstr = arr[i];
+            for(int j = 0; j < currstr.length(); j++){
+                char currchr = currstr.charAt(j);
+                boolean flag = Character.isDigit(currchr);
+                if(flag){
+                    int idx = (int)currchr-'0';
+                    ansarr[idx] = currstr;
+                }
             }
         }
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < ansarr.length; i++){
+            sb.append(ansarr[i]);
+            sb.append(" ");
+        }
+        // System.out.println(sb.toString());
+        return sb.toString();
 
     }
     //-------------------------------- HO JA BHAI ----------------------------------------------------

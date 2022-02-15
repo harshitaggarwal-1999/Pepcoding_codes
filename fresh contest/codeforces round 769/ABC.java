@@ -7,7 +7,7 @@ FROM-> MAHARAJA AGRASEN INSTITUE OF TECHNOLOGY
 import java.util.*;
 import java.io.*;
 
-public class a {
+public class ABC {
     public static void main(String[] args) throws Exception {
         int t = scn.nextInt();
         while (t-- > 0) {
@@ -16,14 +16,24 @@ public class a {
     }
 
     public static void solver() {
-        int n =scn.nextInt();
-        StringBuilder sb = new StringBuilder();
-        char c = (int)'A'-n+1;
-        for(int i = 0 ;i < 2*n; i++){
-            for(int j = 0 ;j < n; j++){
+        int n = scn.nextInt();
+        String str = scn.nextLine();
 
-            }
+        if(str.length() > 2){
+            System.out.println("NO");
         }
+        else if(str.length() == 1){
+            System.out.println("YES");
+        }else if(str.length() ==2){
+            if(str.charAt(0) == str.charAt(1)){
+                System.out.println("NO");
+            }else{
+                System.out.println("YES");
+            }
+        }else{
+            System.out.println("NO");
+        }
+
 
     }
     //-------------------------------- HO JA BHAI ----------------------------------------------------

@@ -7,7 +7,7 @@ FROM-> MAHARAJA AGRASEN INSTITUE OF TECHNOLOGY
 import java.util.*;
 import java.io.*;
 
-public class a {
+public class minmaxarr {
     public static void main(String[] args) throws Exception {
         int t = scn.nextInt();
         while (t-- > 0) {
@@ -16,15 +16,27 @@ public class a {
     }
 
     public static void solver() {
-        int n =scn.nextInt();
-        StringBuilder sb = new StringBuilder();
-        char c = (int)'A'-n+1;
-        for(int i = 0 ;i < 2*n; i++){
-            for(int j = 0 ;j < n; j++){
+        int n = scn.nextInt();
+        int[] a = nextIntArray(n);
+        int[] b = nextIntArray(n);
 
+        for(int i = 0; i  < b.length; i++){
+            if(a[i] < b[i]){
+                int temp = b[i];
+                b[i] = a[i];
+                a[i] = temp;
             }
         }
+        int maxa = Integer.MIN_VALUE;
+        int maxb = Integer.MIN_VALUE;
 
+        for(int i = 0; i < n; i++){
+            maxa = Math.max(a[i], maxa);
+            maxb = Math.max(b[i], maxb);
+        }
+
+        System.out.println(maxa*maxb);
+        
     }
     //-------------------------------- HO JA BHAI ----------------------------------------------------
     /* code ends here*/

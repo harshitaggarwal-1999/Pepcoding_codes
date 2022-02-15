@@ -7,7 +7,7 @@ FROM-> MAHARAJA AGRASEN INSTITUE OF TECHNOLOGY
 import java.util.*;
 import java.io.*;
 
-public class a {
+public class primenumbersbinary {
     public static void main(String[] args) throws Exception {
         int t = scn.nextInt();
         while (t-- > 0) {
@@ -16,14 +16,28 @@ public class a {
     }
 
     public static void solver() {
-        int n =scn.nextInt();
-        StringBuilder sb = new StringBuilder();
-        char c = (int)'A'-n+1;
-        for(int i = 0 ;i < 2*n; i++){
-            for(int j = 0 ;j < n; j++){
+        String str = scn.next();
+        if(str.length() == 1){
+            System.out.println("No");
+            return;
+        }
 
+        for(int i  = 0 ; i < str.length()-1 ; i++){
+            String temp = str.substring(i , i+2);
+            // Debug.dbg(temp);
+            String s1="10";  
+            String s2="11";
+            // Debug.dbg(temp == s1);
+            // Debug.dbg(temp == s2);
+            if(temp.equals(s1) || temp.equals(s2)){
+                System.out.println("Yes");
+                return;
             }
         }
+
+        System.out.println("No");
+
+
 
     }
     //-------------------------------- HO JA BHAI ----------------------------------------------------

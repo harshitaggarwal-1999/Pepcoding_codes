@@ -7,7 +7,8 @@ FROM-> MAHARAJA AGRASEN INSTITUE OF TECHNOLOGY
 import java.util.*;
 import java.io.*;
 
-public class a {
+// codeforces 760 C
+public class paintthearray {
     public static void main(String[] args) throws Exception {
         int t = scn.nextInt();
         while (t-- > 0) {
@@ -16,14 +17,45 @@ public class a {
     }
 
     public static void solver() {
-        int n =scn.nextInt();
-        StringBuilder sb = new StringBuilder();
-        char c = (int)'A'-n+1;
-        for(int i = 0 ;i < 2*n; i++){
-            for(int j = 0 ;j < n; j++){
+        int n = scn.nextInt();
+        long[] arr = nextLongArray(n);
 
+        boolean ispossible = true;
+        long gcd = arr[0];
+        for(int i = 0; i < n; i+=2){
+            gcd = gcd(gcd,arr[i]);
+        }   
+        for(int i = 1; i < n; i+=2){
+            if(arr[i]%gcd == 0){
+                ispossible = false;
+                break;
             }
         }
+
+        if(ispossible){
+            System.out.println(gcd);
+            return;
+        }
+
+        ispossible = true;
+        gcd = arr[1];
+        for(int i = 1; i < n; i+=2){
+            gcd = gcd(gcd, arr[i]);
+        }
+
+        for(int i = 0; i < n; i+=2){
+            if(arr[i]%gcd == 0){
+                ispossible = false;
+                break;
+            }
+        }
+
+        if(ispossible){
+            System.out.println(gcd);
+            return;
+        }
+        System.out.println(0);
+
 
     }
     //-------------------------------- HO JA BHAI ----------------------------------------------------

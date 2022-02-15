@@ -16,14 +16,20 @@ public class a {
     }
 
     public static void solver() {
-        int n =scn.nextInt();
-        StringBuilder sb = new StringBuilder();
-        char c = (int)'A'-n+1;
-        for(int i = 0 ;i < 2*n; i++){
-            for(int j = 0 ;j < n; j++){
+        int n = scn.nextInt();
+        int[] arr = nextIntArray(n);
+        int largestelem = Integer.MIN_VALUE;
+        int smallestelem = Integer.MAX_VALUE;
 
-            }
+        for(int i = 0; i  < arr.length; i++){
+            largestelem = Math.max(arr[i],largestelem);
+            smallestelem = Math.min(arr[i], smallestelem);
+
         }
+
+        System.out.println(largestelem- smallestelem);
+
+        
 
     }
     //-------------------------------- HO JA BHAI ----------------------------------------------------

@@ -7,23 +7,44 @@ FROM-> MAHARAJA AGRASEN INSTITUE OF TECHNOLOGY
 import java.util.*;
 import java.io.*;
 
-public class a {
+public class c {
     public static void main(String[] args) throws Exception {
-        int t = scn.nextInt();
+        int t = 1;
         while (t-- > 0) {
             solver();
         }
     }
-
-    public static void solver() {
-        int n =scn.nextInt();
+    
+    public static String convert(long k){
         StringBuilder sb = new StringBuilder();
-        char c = (int)'A'-n+1;
-        for(int i = 0 ;i < 2*n; i++){
-            for(int j = 0 ;j < n; j++){
 
+        while(k > 0){
+            sb.append(""+k%2);
+            k = k/2;
+        }
+
+        return sb.toString();
+    }
+
+    
+    public static void solver() {
+        long k  = scn.nextLong();
+
+        String str = convert(k);
+
+        StringBuilder sb = new StringBuilder(str);
+        sb.reverse();
+        str = sb.toString();
+
+        for(int i = 0; i < str.length(); i++){
+            if(str.charAt(i) == '1')System.out.print(2);
+            else{
+                System.out.print(0);
             }
         }
+        System.out.println();
+        
+        
 
     }
     //-------------------------------- HO JA BHAI ----------------------------------------------------

@@ -7,7 +7,7 @@ FROM-> MAHARAJA AGRASEN INSTITUE OF TECHNOLOGY
 import java.util.*;
 import java.io.*;
 
-public class a {
+public class oddswapsort {
     public static void main(String[] args) throws Exception {
         int t = scn.nextInt();
         while (t-- > 0) {
@@ -16,14 +16,35 @@ public class a {
     }
 
     public static void solver() {
-        int n =scn.nextInt();
-        StringBuilder sb = new StringBuilder();
-        char c = (int)'A'-n+1;
-        for(int i = 0 ;i < 2*n; i++){
-            for(int j = 0 ;j < n; j++){
+        int n = scn.nextInt();
+        int[] arr = nextIntArray(n);
 
+        ArrayList<Integer> odd = new ArrayList<>();
+        ArrayList<Integer> oddchange = new ArrayList<>();
+        ArrayList<Integer> even = new ArrayList<>();
+        ArrayList<Integer> evenchange = new ArrayList<>();
+
+
+        for(int i = 0 ; i < arr.length; i++){
+            if(arr[i]%2 == 0){
+                //even
+                even.add(arr[i]);
+                evenchange.add(arr[i]);
+            }else{
+                odd.add(arr[i]);
+                oddchange.add(arr[i]);
             }
         }
+
+        Collections.sort(evenchange);
+        Collections.sort(oddchange);
+
+        if(even.equals(evenchange) && odd.equals(oddchange)){
+            System.out.println("Yes");
+        }else{
+            System.out.println("NO");
+        }
+
 
     }
     //-------------------------------- HO JA BHAI ----------------------------------------------------

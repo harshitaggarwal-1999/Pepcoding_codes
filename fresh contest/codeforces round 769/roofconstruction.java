@@ -7,7 +7,7 @@ FROM-> MAHARAJA AGRASEN INSTITUE OF TECHNOLOGY
 import java.util.*;
 import java.io.*;
 
-public class a {
+public class roofconstruction {
     public static void main(String[] args) throws Exception {
         int t = scn.nextInt();
         while (t-- > 0) {
@@ -16,14 +16,17 @@ public class a {
     }
 
     public static void solver() {
-        int n =scn.nextInt();
-        StringBuilder sb = new StringBuilder();
-        char c = (int)'A'-n+1;
-        for(int i = 0 ;i < 2*n; i++){
-            for(int j = 0 ;j < n; j++){
+        int n = scn.nextInt();
 
-            }
+        int num = (int) (Math.log(n-1)/Math.log(2));
+        num = (int)Math.pow(2, num);
+        for(int i = n-1; i >= num; i--){
+            System.out.print(i+" ");
         }
+        for(int i = 0; i < num; i++){
+            System.out.print(i+ " ");
+        }
+        System.out.println();
 
     }
     //-------------------------------- HO JA BHAI ----------------------------------------------------

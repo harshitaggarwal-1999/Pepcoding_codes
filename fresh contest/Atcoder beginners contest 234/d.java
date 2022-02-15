@@ -7,23 +7,35 @@ FROM-> MAHARAJA AGRASEN INSTITUE OF TECHNOLOGY
 import java.util.*;
 import java.io.*;
 
-public class a {
+public class d {
     public static void main(String[] args) throws Exception {
-        int t = scn.nextInt();
+        int t = 1;
         while (t-- > 0) {
             solver();
         }
     }
 
     public static void solver() {
-        int n =scn.nextInt();
-        StringBuilder sb = new StringBuilder();
-        char c = (int)'A'-n+1;
-        for(int i = 0 ;i < 2*n; i++){
-            for(int j = 0 ;j < n; j++){
-
-            }
+        int n = scn.nextInt();
+        int k = scn.nextInt();
+        int[] arr = new int[n];
+        for(int i = 0 ; i < arr.length; i++){
+            arr[i] = scn.nextInt();
         }
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        for(int i = 0; i < k; i++){
+            pq.add(arr[i]);
+        }
+        StringBuilder sb = new StringBuilder();
+        sb.append(pq.peek()+"\n");
+        for(int i = k; i < arr.length; i++){
+            if(pq.peek() < arr[i]){
+                pq.poll();
+                pq.add(arr[i]);
+            }
+            sb.append(pq.peek()+"\n");
+        }
+        System.out.println(sb.toString());
 
     }
     //-------------------------------- HO JA BHAI ----------------------------------------------------
