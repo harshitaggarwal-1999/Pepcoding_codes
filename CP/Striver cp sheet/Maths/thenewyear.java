@@ -7,31 +7,28 @@ FROM-> MAHARAJA AGRASEN INSTITUE OF TECHNOLOGY
 import java.util.*;
 import java.io.*;
 
-public class bitsPlusPlus {
+public class thenewyear {
     public static void main(String[] args) throws Exception {
         int t = 1;
         while (t-- > 0) {
             solver();
         }
     }
-    
+
     public static void solver() {
-        int n = scn.nextInt();
-        int x = 0;
-        while(n-- > 0){
-            String str = scn.next();
-
-            char[] arr = str.toCharArray();
-            List<Character> lis = new ArrayList<>();
-            for(int i = 0 ; i < arr.length; i++){
-                lis.add(arr[i]);
-            }
-
-            if(lis.contains('+'))x++;
-            else x--;
+        ArrayList<Integer> ar= new ArrayList<>();
+        for(int i = 0; i<3; i++)
+        {
+            ar.add(scn.nextInt());
         }
-        System.out.println(x);
-
+        Collections.sort(ar);
+        int op= 0;
+        for(Integer element:ar)
+        {
+            int s= ar.get(1);
+            s = Math.abs(s-element);
+            op+=s;
+        }System.out.println(op);
 
     }
     //-------------------------------- HO JA BHAI ----------------------------------------------------
